@@ -1,0 +1,5 @@
+{
+  "mfOperaciones": "http://localhost:4201/remoteEntry.js",
+  "mfReportes": "http://localhost:4202/remoteEntry.js",
+  "mfAdministracion": "http://localhost:4203/remoteEntry.js"
+}

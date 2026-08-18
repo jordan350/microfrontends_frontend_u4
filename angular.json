@@ -1,0 +1,183 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "shell": {
+      "projectType": "application",
+      "root": "projects/shell",
+      "sourceRoot": "projects/shell/src",
+      "prefix": "fin",
+      "architect": {
+        "build": {
+          "builder": "ngx-build-plus:browser",
+          "options": {
+            "outputPath": "dist/shell",
+            "index": "projects/shell/src/index.html",
+            "main": "projects/shell/src/main.ts",
+            "polyfills": ["zone.js"],
+            "tsConfig": "projects/shell/tsconfig.app.json",
+            "inlineStyleLanguage": "css",
+            "assets": ["projects/shell/src/assets"],
+            "styles": ["projects/shared/src/styles.css"],
+            "scripts": [],
+            "extraWebpackConfig": "projects/shell/webpack.config.js",
+            "commonChunk": false
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {"type": "initial", "maximumWarning": "700kb", "maximumError": "1mb"},
+                {"type": "anyComponentStyle", "maximumWarning": "4kb", "maximumError": "8kb"}
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "ngx-build-plus:dev-server",
+          "options": {
+            "port": 4200,
+            "publicHost": "http://localhost:4200",
+            "extraWebpackConfig": "projects/shell/webpack.config.js"
+          },
+          "configurations": {
+            "production": {"buildTarget": "shell:build:production"},
+            "development": {"buildTarget": "shell:build:development"}
+          },
+          "defaultConfiguration": "development"
+        }
+      }
+    },
+    "mf-operaciones": {
+      "projectType": "application",
+      "root": "projects/mf-operaciones",
+      "sourceRoot": "projects/mf-operaciones/src",
+      "prefix": "fin",
+      "architect": {
+        "build": {
+          "builder": "ngx-build-plus:browser",
+          "options": {
+            "outputPath": "dist/mf-operaciones",
+            "index": "projects/mf-operaciones/src/index.html",
+            "main": "projects/mf-operaciones/src/main.ts",
+            "polyfills": ["zone.js"],
+            "tsConfig": "projects/mf-operaciones/tsconfig.app.json",
+            "inlineStyleLanguage": "css",
+            "assets": [],
+            "styles": ["projects/shared/src/styles.css"],
+            "scripts": [],
+            "extraWebpackConfig": "projects/mf-operaciones/webpack.config.js",
+            "commonChunk": false
+          },
+          "configurations": {
+            "production": {"outputHashing": "all"},
+            "development": {"buildOptimizer": false, "optimization": false, "vendorChunk": true, "extractLicenses": false, "sourceMap": true, "namedChunks": true}
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "ngx-build-plus:dev-server",
+          "options": {
+            "port": 4201,
+            "publicHost": "http://localhost:4201",
+            "extraWebpackConfig": "projects/mf-operaciones/webpack.config.js",
+            "headers": {"Access-Control-Allow-Origin": "*"}
+          },
+          "configurations": {"production": {"buildTarget": "mf-operaciones:build:production"}, "development": {"buildTarget": "mf-operaciones:build:development"}},
+          "defaultConfiguration": "development"
+        }
+      }
+    },
+    "mf-reportes": {
+      "projectType": "application",
+      "root": "projects/mf-reportes",
+      "sourceRoot": "projects/mf-reportes/src",
+      "prefix": "fin",
+      "architect": {
+        "build": {
+          "builder": "ngx-build-plus:browser",
+          "options": {
+            "outputPath": "dist/mf-reportes",
+            "index": "projects/mf-reportes/src/index.html",
+            "main": "projects/mf-reportes/src/main.ts",
+            "polyfills": ["zone.js"],
+            "tsConfig": "projects/mf-reportes/tsconfig.app.json",
+            "inlineStyleLanguage": "css",
+            "assets": [],
+            "styles": ["projects/shared/src/styles.css"],
+            "scripts": [],
+            "extraWebpackConfig": "projects/mf-reportes/webpack.config.js",
+            "commonChunk": false
+          },
+          "configurations": {
+            "production": {"outputHashing": "all"},
+            "development": {"buildOptimizer": false, "optimization": false, "vendorChunk": true, "extractLicenses": false, "sourceMap": true, "namedChunks": true}
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "ngx-build-plus:dev-server",
+          "options": {
+            "port": 4202,
+            "publicHost": "http://localhost:4202",
+            "extraWebpackConfig": "projects/mf-reportes/webpack.config.js",
+            "headers": {"Access-Control-Allow-Origin": "*"}
+          },
+          "configurations": {"production": {"buildTarget": "mf-reportes:build:production"}, "development": {"buildTarget": "mf-reportes:build:development"}},
+          "defaultConfiguration": "development"
+        }
+      }
+    },
+    "mf-administracion": {
+      "projectType": "application",
+      "root": "projects/mf-administracion",
+      "sourceRoot": "projects/mf-administracion/src",
+      "prefix": "fin",
+      "architect": {
+        "build": {
+          "builder": "ngx-build-plus:browser",
+          "options": {
+            "outputPath": "dist/mf-administracion",
+            "index": "projects/mf-administracion/src/index.html",
+            "main": "projects/mf-administracion/src/main.ts",
+            "polyfills": ["zone.js"],
+            "tsConfig": "projects/mf-administracion/tsconfig.app.json",
+            "inlineStyleLanguage": "css",
+            "assets": [],
+            "styles": ["projects/shared/src/styles.css"],
+            "scripts": [],
+            "extraWebpackConfig": "projects/mf-administracion/webpack.config.js",
+            "commonChunk": false
+          },
+          "configurations": {
+            "production": {"outputHashing": "all"},
+            "development": {"buildOptimizer": false, "optimization": false, "vendorChunk": true, "extractLicenses": false, "sourceMap": true, "namedChunks": true}
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "ngx-build-plus:dev-server",
+          "options": {
+            "port": 4203,
+            "publicHost": "http://localhost:4203",
+            "extraWebpackConfig": "projects/mf-administracion/webpack.config.js",
+            "headers": {"Access-Control-Allow-Origin": "*"}
+          },
+          "configurations": {"production": {"buildTarget": "mf-administracion:build:production"}, "development": {"buildTarget": "mf-administracion:build:development"}},
+          "defaultConfiguration": "development"
+        }
+      }
+    }
+  },
+  "cli": {"analytics": false}
+}
