@@ -1,4 +1,8 @@
-# FinOps - Angular Microfrontends
+# Entrega final U4 - Angular Microfrontends
+
+Saulo Barbosa - Jordan Garcia
+
+**POLITECNICO GRANCOLOMBIANO** - **ARQUITECTURA FRONT-END**
 
 Prototipo funcional de composición en cliente con un **Shell Angular** y tres aplicaciones remotas separadas mediante **Module Federation**:
 
